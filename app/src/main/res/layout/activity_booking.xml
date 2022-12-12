@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20sp"
+    android:background="@color/black_background"
+    android:orientation="vertical"
+    tools:context=".Booking">
+
+    <TextView
+        android:id="@+id/lblcomplateyourbooking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Complate your booking"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/lblmoviename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Movie Name"
+        android:layout_marginTop="50sp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_below="@id/lblcomplateyourbooking"
+        />
+
+    <TextView
+        android:id="@+id/theatername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Theater Name"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_below="@id/lblmoviename"
+        />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="20sp"
+        android:layout_below="@id/theatername"
+        />
+
+    <TextView
+        android:id="@+id/lbldate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_below="@id/img"
+        />
+    <TextView
+        android:id="@+id/lbltime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_below="@id/lbldate"
+        />
+
+    <TextView
+        android:id="@+id/lblscreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Screen"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_below="@id/lbltime"
+        />
+    <TextView
+        android:id="@+id/lblscreennumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Screen No"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_below="@id/lblscreen"
+        />
+
+    <TextView
+        android:id="@+id/lblseats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seats"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_below="@id/lblscreennumber"
+        />
+    <TextView
+        android:id="@+id/lblseatsnumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seats no"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_below="@id/lblseats"
+        />
+
+    <TextView
+        android:id="@+id/lblbookingsummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Booking Summary"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_below="@id/lblseatsnumber"
+        />
+    <TextView
+        android:id="@+id/lbltotaltickets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Tickets"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_below="@id/lblbookingsummary"
+        />
+    <TextView
+        android:id="@+id/lbltotalticketsrs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rs."
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_below="@id/lbltotaltickets"
+        />
+    <TextView
+        android:id="@+id/lbltextfees"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Tickets"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_below="@id/lbltotalticketsrs"
+        />
+    <TextView
+        android:id="@+id/lbltextfeesrs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rs."
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_below="@id/lbltextfees"
+        />
+    <TextView
+        android:id="@+id/lbltotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_below="@id/lbltextfeesrs"
+        />
+    <TextView
+        android:id="@+id/lbltotalrs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rs."
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_below="@id/lbltotal"
+        />
+
+    <Button
+        android:id="@+id/btnprocessforpayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Process for payment."
+        android:layout_below="@id/lbltotalrs"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
+</RelativeLayout>

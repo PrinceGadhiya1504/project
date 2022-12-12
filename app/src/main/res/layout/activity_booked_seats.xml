@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20sp"
+    android:background="@color/black_background"
+    android:orientation="vertical"
+    tools:context=".BookedSeats">
+
+    <TextView
+        android:id="@+id/lblmoviename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20sp"
+        android:text="Movie Name"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/lbltheatername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblmoviename"
+        android:layout_marginBottom="20sp"
+        android:text="Movie Name"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/lbldate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/lbltheatername">
+
+        <EditText
+            android:id="@+id/calandermon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgfirst"
+            android:text="mon"
+            android:textColor="@color/white"
+            />
+        
+        <RadioGroup
+            android:id="@+id/screen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/screen1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Screen1"
+                android:textColor="@color/white"
+                />
+            <RadioButton
+                android:id="@+id/screen2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Screen1"
+                android:textColor="@color/white"
+                />
+            <RadioButton
+                android:id="@+id/screen3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Screen1"
+                android:textColor="@color/white"
+                />
+        </RadioGroup>
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/check1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbldate"
+        />
+    <CheckBox
+        android:id="@+id/check2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/check1"
+        />
+
+</RelativeLayout>
