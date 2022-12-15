@@ -172,10 +172,11 @@
         android:id="@+id/btnprocessforpayment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Process for payment."
         android:layout_below="@id/lbltotalrs"
         android:layout_centerHorizontal="true"
-        />
+        android:minHeight="48dp"
+        android:text="Process for payment."
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
 
 

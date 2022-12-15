@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="20sp"
     android:background="@color/black_background"
     android:orientation="vertical"
     tools:context=".ShowTime">
@@ -17,7 +16,7 @@
         android:layout_marginBottom="20sp"
         android:gravity="center"
         android:text="Movie Name"
-        android:textColor="@color/white"
+        android:textColor="@color/greenblue"
         android:textSize="40sp" />
 
     <ImageView
@@ -25,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="200sp"
         android:layout_below="@id/lblRegister"
+        android:src="@drawable/movie"
         android:layout_marginBottom="20sp" />
 
     <EditText
@@ -70,45 +70,45 @@
         android:textColor="@color/white"
         />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn9am"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/theatername"
         android:layout_marginStart="40sp"
-        android:backgroundTint="@color/greenblue"
+        android:background="@drawable/button_style"
         android:text="9:00 AM"
         android:textColor="@color/black" />
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn12am"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn9am"
         android:layout_marginStart="40sp"
-        android:backgroundTint="@color/greenblue"
+        android:background="@drawable/button_style"
         android:textColor="@color/black"
         android:text="12:00 AM"
         />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn3am"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/theatername"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="40sp"
-        android:backgroundTint="@color/greenblue"
+        android:background="@drawable/button_style"
         android:textColor="@color/black"
         android:text="3:00 AM" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn6am"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn3am"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="40sp"
-        android:backgroundTint="@color/greenblue"
+        android:background="@drawable/button_style"
         android:textColor="@color/black"
         android:text="6:00 AM"
         />
