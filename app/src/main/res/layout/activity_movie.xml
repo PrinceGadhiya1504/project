@@ -58,12 +58,12 @@
 
 
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnbooknow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtprice"
-        android:backgroundTint="@color/greenblue"
+        android:background="@drawable/button_style"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20sp"
         android:text="Book Now" />

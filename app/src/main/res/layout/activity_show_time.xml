@@ -75,28 +75,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/theatername"
+        android:layout_marginStart="40sp"
+        android:backgroundTint="@color/greenblue"
         android:text="9:00 AM"
-        />
-    <Button
-        android:id="@+id/btn3am"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn9am"
-        android:text="12:00 AM"
-        />
-
+        android:textColor="@color/black" />
     <Button
         android:id="@+id/btn12am"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn12am"
+        android:layout_below="@id/btn9am"
+        android:layout_marginStart="40sp"
+        android:backgroundTint="@color/greenblue"
+        android:textColor="@color/black"
+        android:text="12:00 AM"
+        />
+
+    <Button
+        android:id="@+id/btn3am"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/theatername"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40sp"
+        android:backgroundTint="@color/greenblue"
+        android:textColor="@color/black"
         android:text="3:00 AM" />
 
     <Button
         android:id="@+id/btn6am"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn12am"
+        android:layout_below="@id/btn3am"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40sp"
+        android:backgroundTint="@color/greenblue"
+        android:textColor="@color/black"
         android:text="6:00 AM"
         />
 
