@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:text="Complate your booking"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="30sp"
         />
 
     <TextView
