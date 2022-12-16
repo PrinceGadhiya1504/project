@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="150sp"
         android:layout_marginBottom="20sp"
-        android:src="@drawable/movie"
+        android:src="@drawable/logo"
         />
 
     <TextView
@@ -96,14 +96,14 @@
         android:textColorHint="@color/gray" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnsubmit"
+        android:id="@+id/btnregister"
         android:layout_width="150sp"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtcomformpassword"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40sp"
         android:background="@drawable/button_style"
-        android:text="Submit"
+        android:text="Register"
         android:textColor="@color/black"/>
 
 </RelativeLayout>
