@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 
 class login : AppCompatActivity()
@@ -22,7 +23,7 @@ class login : AppCompatActivity()
             }
         }
 
-        findViewById<Button>(R.id.btnregister).let{
+        findViewById<TextView>(R.id.lblregisterlink).let{
             it.setOnClickListener{
                 val intent = Intent(this, register::class.java)
                 startActivity(intent)
