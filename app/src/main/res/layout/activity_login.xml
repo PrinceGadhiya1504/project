@@ -9,7 +9,8 @@
     android:orientation="vertical"
     android:padding="20sp"
     android:background="@color/black_background"
-    tools:context=".login">
+    tools:context=".login"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"

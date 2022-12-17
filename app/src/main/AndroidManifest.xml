@@ -23,7 +23,6 @@
         <activity
             android:name=".movie"
             android:exported="false">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -43,6 +42,7 @@
         <activity
             android:name=".BookedSeats"
             android:exported="false">
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

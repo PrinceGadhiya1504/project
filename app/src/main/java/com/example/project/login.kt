@@ -18,8 +18,8 @@ class login : AppCompatActivity()
 
         findViewById<Button>(R.id.btnlogin).let {
             it.setOnClickListener{
-                Toast.makeText(this,"Login successfully",Toast.LENGTH_LONG).show()
-
+                val intent = Intent(this, movie::class.java)
+                startActivity(intent)
             }
         }
 
