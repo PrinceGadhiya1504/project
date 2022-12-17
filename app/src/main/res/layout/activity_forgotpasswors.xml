@@ -21,61 +21,50 @@
         android:contentDescription="@string/todo" />
 
     <TextView
-        android:id="@+id/lbllogin"
+        android:id="@+id/lblnewpassword"
         android:layout_below="@id/imgfirst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="@string/log_in"
+        android:text="@string/new_password"
         android:padding="10sp"
         android:textColor="@color/white"
         android:textSize="30sp" />
 
     <EditText
-        android:id="@+id/txtusername"
+        android:id="@+id/txtpassword"
         android:layout_width="match_parent"
         android:layout_marginTop="20sp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/lbllogin"
+        android:layout_below="@id/lblnewpassword"
         android:layout_marginBottom="20sp"
-        android:hint="@string/username"
-        android:drawableStart="@drawable/ic_baseline_person"
+        android:hint="Enter New Password"
+        android:drawableStart="@drawable/ic_outline_lock"
         android:drawablePadding="15sp"
         android:minHeight="48dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:autofillHints="username"
-        android:inputType="text" />
+        android:inputType="textPassword" />
 
     <EditText
-        android:id="@+id/txtpassword"
+        android:id="@+id/txtcomformpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtusername"
-        android:hint="@string/password"
+        android:layout_below="@id/txtpassword"
+        android:hint="Comform Password"
         android:minHeight="48dp"
         android:textColor="@color/white"
         android:drawableStart="@drawable/ic_outline_lock_24"
         android:drawablePadding="15sp"
         android:textColorHint="@color/white"
-        android:autofillHints="password"
         android:inputType="textPassword" />
 
-    <TextView
-        android:id="@+id/lblforgetpassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtpassword"
-        android:layout_alignParentEnd="true"
-        android:text="@string/forgot_password"
-        android:textColor="@color/greenblue"
-        android:textSize="13sp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnlogin"
         android:layout_width="150sp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtpassword"
+        android:layout_below="@id/txtcomformpassword"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_style"
         android:text="@string/login"
@@ -83,35 +72,6 @@
         android:layout_marginTop="50sp"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnlogin"
-        android:orientation="horizontal"
-        android:layout_marginTop="20sp"
-        android:layout_centerInParent="true">
 
-    <TextView
-        android:id="@+id/lbldotaccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/don_t_have_an_account"
-        android:textColor="@color/white"
-        android:layout_marginEnd="10sp"
-        android:textSize="15sp" />
-
-    <TextView
-        android:id="@+id/lblregisterlink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autoLink="web"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="@string/click_here"
-        android:textColor="@color/greenblue"
-        android:textSize="15sp"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    </LinearLayout>
 
 </RelativeLayout>

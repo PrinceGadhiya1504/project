@@ -30,7 +30,12 @@ class login : AppCompatActivity()
             }
         }
 
-
+        findViewById<TextView>(R.id.lblforgetpassword).let{
+            it.setOnClickListener{
+                val intent = Intent(this, forgotpasswors::class.java)
+                startActivity(intent)
+            }
+        }
 
     }
 }
