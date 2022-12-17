@@ -11,4 +11,10 @@
     <string name="lblregister">Register</string>
     <string name="todo">TODO</string>
     <string name="new_password">New Password</string>
+    <string name="movie">Movie</string>
+    <string name="title">title</string>
+    <string name="description">Description</string>
+    <string name="price">Price</string>
+    <string name="book_now">Book Now</string>
+    <string name="moviephoto">moviephoto</string>
 </resources>
