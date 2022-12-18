@@ -1,183 +1,244 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="20sp"
     android:background="@color/black_background"
     android:orientation="vertical"
     tools:context=".Booking">
 
-    <TextView
-        android:id="@+id/lblcomplateyourbooking"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Complate your booking"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        />
+        android:layout_height="match_parent "
+        >
 
     <TextView
-        android:id="@+id/lblmoviename"
-        android:layout_width="match_parent"
+        android:id="@+id/lblcomplateyourbooking"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Movie Name"
-        android:layout_marginTop="50sp"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:layout_below="@id/lblcomplateyourbooking"
+        android:text="Complate your booking"
+        android:textColor="@color/greenblue"
+        android:layout_marginTop="25sp"
+        android:textSize="25sp"
         />
+
+        <RelativeLayout
+            android:id="@+id/card1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:layout_below="@id/lblcomplateyourbooking"
+            android:layout_marginTop="25sp"
+            android:background="@drawable/layout_white">
+
+            <TextView
+                android:id="@+id/lblmoviename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Movie Name"
+                android:layout_marginTop="50sp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                />
+
+
+
 
     <TextView
         android:id="@+id/theatername"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Theater Name"
-        android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
         android:layout_below="@id/lblmoviename"
         />
 
-    <ImageView
-        android:id="@+id/img"
-        android:layout_width="match_parent"
-        android:layout_height="20sp"
-        android:layout_below="@id/theatername"
-        />
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="130sp"
+                android:layout_height="130sp"
+                android:background="@drawable/image_radius"
+                android:contentDescription="@string/moviephoto"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/movie"
+                android:layout_marginTop="10sp"
+                tools:ignore="ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/drawline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - "
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_below="@id/img"
+                />
 
     <TextView
         android:id="@+id/lbldate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Date"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_below="@id/img"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_below="@id/drawline"
         />
     <TextView
         android:id="@+id/lbltime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Time"
-        android:textColor="@color/white"
-        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         android:layout_below="@id/lbldate"
         />
 
     <TextView
         android:id="@+id/lblscreen"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Screen"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_below="@id/lbltime"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginStart="220sp"
+        android:layout_below="@id/drawline"
         />
     <TextView
         android:id="@+id/lblscreennumber"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Screen No"
-        android:textColor="@color/white"
-        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="220sp"
+        android:textSize="20sp"
         android:layout_below="@id/lblscreen"
         />
 
     <TextView
         android:id="@+id/lblseats"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Seats"
-        android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_marginTop="15sp"
         android:layout_below="@id/lblscreennumber"
         />
     <TextView
         android:id="@+id/lblseatsnumber"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Seats no"
-        android:textColor="@color/white"
-        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         android:layout_below="@id/lblseats"
+        android:layout_marginBottom="15sp"
         />
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/card2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card1"
+        android:layout_marginTop="20sp"
+        android:padding="10sp"
+        android:background="@drawable/layout_white">
 
     <TextView
         android:id="@+id/lblbookingsummary"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Booking Summary"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25sp"
-        android:layout_below="@id/lblseatsnumber"
         />
     <TextView
         android:id="@+id/lbltotaltickets"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Total Tickets"
-        android:textColor="@color/white"
-        android:textSize="20sp"
+        android:layout_marginTop="10sp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
         android:layout_below="@id/lblbookingsummary"
         />
     <TextView
         android:id="@+id/lbltotalticketsrs"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Rs."
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_below="@id/lbltotaltickets"
+        android:textColor="@color/black"
+        android:layout_alignParentEnd="true"
+        android:textSize="15sp"
+        android:layout_below="@id/lblbookingsummary"
         />
     <TextView
         android:id="@+id/lbltextfees"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Total Tickets"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_below="@id/lbltotalticketsrs"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_below="@id/lbltotaltickets"
         />
     <TextView
         android:id="@+id/lbltextfeesrs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Rs."
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_below="@id/lbltextfees"
-        />
-    <TextView
-        android:id="@+id/lbltotal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Total"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:layout_below="@id/lbltextfeesrs"
-        />
-    <TextView
-        android:id="@+id/lbltotalrs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Rs."
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_below="@id/lbltotal"
-        />
-
-    <Button
-        android:id="@+id/btnprocessforpayment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/lbltotalrs"
-        android:layout_centerHorizontal="true"
-        android:minHeight="48dp"
-        android:text="Process for payment."
-        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+        android:text="Rs."
+        android:textColor="@color/black"
+        android:layout_alignParentEnd="true"
+        android:textSize="15sp"
+        android:layout_below="@id/lbltotaltickets"
+        android:layout_marginBottom="15sp"
+        />
+    </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/card3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card2"
+        android:layout_marginTop="20sp"
+        android:padding="10sp"
+        android:background="@drawable/layout_white">
 
+        <TextView
+            android:id="@+id/lbltotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/lbltotalrs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_alignParentEnd="true"
+        />
+    </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnprocessforpayment"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card3"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_style"
+            android:layout_marginTop="20sp"
+            android:padding="10sp"
+            android:text="Process for payment."
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+    </RelativeLayout>
+
+</ScrollView>
