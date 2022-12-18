@@ -14,7 +14,7 @@ class BookedSeats : AppCompatActivity()
 
         findViewById<Button>(R.id.btnbooknow1).let {
             it.setOnClickListener {
-                val intent = Intent(this, ShowTime::class.java)
+                val intent = Intent(this, Booking::class.java)
                 startActivity(intent)
             }
         }

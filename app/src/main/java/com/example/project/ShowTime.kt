@@ -14,25 +14,25 @@ class ShowTime : AppCompatActivity()
 
         findViewById<Button>(R.id.btn9am).let {
             it.setOnClickListener {
-                val intent = Intent(this, Booking::class.java)
+                val intent = Intent(this, BookedSeats::class.java)
                 startActivity(intent)
             }
         }
         findViewById<Button>(R.id.btn3am).let {
             it.setOnClickListener {
-                val intent = Intent(this, Booking::class.java)
+                val intent = Intent(this, BookedSeats::class.java)
                 startActivity(intent)
             }
         }
         findViewById<Button>(R.id.btn12am).let {
             it.setOnClickListener {
-                val intent = Intent(this, Booking::class.java)
+                val intent = Intent(this, BookedSeats::class.java)
                 startActivity(intent)
             }
         }
         findViewById<Button>(R.id.btn6am).let {
             it.setOnClickListener {
-                val intent = Intent(this, Booking::class.java)
+                val intent = Intent(this, BookedSeats::class.java)
                 startActivity(intent)
             }
         }
