@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,15 +10,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-    <EditText
+    <TextView
         android:id="@+id/txtmoviename"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20sp"
         android:gravity="center"
-        android:text="Movie Name"
+        android:text="@string/movie_name"
         android:textColor="@color/greenblue"
         android:textSize="40sp" />
 
@@ -30,15 +29,15 @@
         android:layout_below="@id/txtmoviename"
         android:src="@drawable/movie"
         android:layout_marginTop="20sp"
-        />
+        android:contentDescription="@string/movieimg" />
 
-    <EditText
+    <TextView
         android:id="@+id/txtdescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/imgfirst"
         android:layout_marginTop="20sp"
-        android:text="Description"
+        android:text="@string/description"
         android:textColor="@color/white" />
 
     <LinearLayout
@@ -49,30 +48,29 @@
         android:layout_marginTop="20sp"
         android:orientation="horizontal">
 
-        <EditText
+        <TextView
             android:id="@+id/calandermon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imgfirst"
-            android:text="mon"
+            android:text="@string/mon"
             android:textColor="@color/white" />
 
-        <EditText
+        <TextView
             android:id="@+id/calandertue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="tue"
+            android:text="@string/tue"
             android:textColor="@color/white" />
 
     </LinearLayout>
 
-    <EditText
+    <TextView
         android:id="@+id/theatername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/lblcalander"
         android:layout_marginTop="20sp"
-        android:text="Theater Name"
+        android:text="@string/theater_name"
         android:textColor="@color/white" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -83,7 +81,7 @@
         android:layout_marginStart="40sp"
         android:layout_marginTop="25sp"
         android:background="@drawable/button_style"
-        android:text="9:00 AM"
+        android:text="@string/_9_00_am"
         android:textColor="@color/black" />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn12am"
@@ -94,7 +92,7 @@
         android:layout_marginTop="25sp"
         android:background="@drawable/button_style"
         android:textColor="@color/black"
-        android:text="12:00 AM"
+        android:text="@string/_12_00_am"
         />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -107,7 +105,7 @@
         android:layout_marginTop="25sp"
         android:background="@drawable/button_style"
         android:textColor="@color/black"
-        android:text="3:00 AM" />
+        android:text="@string/_3_00_am" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn6am"
@@ -119,7 +117,7 @@
         android:layout_marginTop="25sp"
         android:background="@drawable/button_style"
         android:textColor="@color/black"
-        android:text="6:00 AM"
+        android:text="@string/_6_00_am"
         />
     </RelativeLayout>
 </ScrollView>

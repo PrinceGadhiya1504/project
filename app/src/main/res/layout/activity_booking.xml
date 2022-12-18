@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,14 +10,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent "
+        android:layout_height="wrap_content"
         >
 
     <TextView
         android:id="@+id/lblcomplateyourbooking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Complate your booking"
+        android:text="@string/complate_your_booking"
+        android:gravity="center"
         android:textColor="@color/greenblue"
         android:layout_marginTop="25sp"
         android:textSize="25sp"
@@ -37,11 +37,11 @@
                 android:id="@+id/lblmoviename"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Movie Name"
+                android:text="@string/movie_name"
                 android:layout_marginTop="50sp"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                />
+                tools:ignore="RelativeOverlap" />
 
 
 
@@ -50,7 +50,7 @@
         android:id="@+id/theatername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Theater Name"
+        android:text="@string/theater_name"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:layout_below="@id/lblmoviename"
@@ -71,7 +71,7 @@
                 android:id="@+id/drawline"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="- - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - "
+                android:text="@string/desh"
                 android:textColor="@color/black"
                 android:gravity="center"
                 android:textSize="20sp"
@@ -82,7 +82,7 @@
         android:id="@+id/lbldate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Date"
+        android:text="@string/date"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:layout_below="@id/drawline"
@@ -91,7 +91,7 @@
         android:id="@+id/lbltime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Time"
+        android:text="@string/time"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:layout_below="@id/lbldate"
@@ -101,7 +101,7 @@
         android:id="@+id/lblscreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Screen"
+        android:text="@string/screen"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:layout_marginStart="220sp"
@@ -111,7 +111,7 @@
         android:id="@+id/lblscreennumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Screen No"
+        android:text="@string/screen_no"
         android:textColor="@color/black"
         android:layout_marginStart="220sp"
         android:textSize="20sp"
@@ -122,7 +122,7 @@
         android:id="@+id/lblseats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Seats"
+        android:text="@string/seats"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:layout_marginTop="15sp"
@@ -132,7 +132,7 @@
         android:id="@+id/lblseatsnumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Seats no"
+        android:text="@string/seats_no"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:layout_below="@id/lblseats"
@@ -153,7 +153,7 @@
         android:id="@+id/lblbookingsummary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Booking Summary"
+        android:text="@string/booking_summary"
         android:textColor="@color/black"
         android:textSize="25sp"
         />
@@ -161,7 +161,7 @@
         android:id="@+id/lbltotaltickets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total Tickets"
+        android:text="@string/total_tickets"
         android:layout_marginTop="10sp"
         android:textColor="@color/black"
         android:textSize="15sp"
@@ -171,7 +171,7 @@
         android:id="@+id/lbltotalticketsrs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rs."
+        android:text="@string/rs"
         android:textColor="@color/black"
         android:layout_alignParentEnd="true"
         android:textSize="15sp"
@@ -181,7 +181,7 @@
         android:id="@+id/lbltextfees"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total Tickets"
+        android:text="@string/total_tickets"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:layout_below="@id/lbltotaltickets"
@@ -190,7 +190,7 @@
         android:id="@+id/lbltextfeesrs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rs."
+        android:text="@string/rs"
         android:textColor="@color/black"
         android:layout_alignParentEnd="true"
         android:textSize="15sp"
@@ -212,7 +212,7 @@
             android:id="@+id/lbltotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total"
+            android:text="@string/total"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
@@ -220,11 +220,11 @@
             android:id="@+id/lbltotalrs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rs."
+            android:text="@string/rs"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:layout_alignParentEnd="true"
-        />
+            tools:ignore="RelativeOverlap" />
     </RelativeLayout>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -236,7 +236,7 @@
             android:background="@drawable/button_style"
             android:layout_marginTop="20sp"
             android:padding="10sp"
-            android:text="Process for payment."
+            android:text="@string/process_for_payment"
             tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     </RelativeLayout>

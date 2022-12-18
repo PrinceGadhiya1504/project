@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,6 +10,10 @@
     android:background="@color/black_background"
     tools:context=".login">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <ImageView
         android:id="@+id/imgfirst"
         android:layout_width="match_parent"
@@ -18,7 +21,7 @@
         android:layout_marginTop="80sp"
         android:layout_marginBottom="20sp"
         android:src="@drawable/logo"
-        android:contentDescription="@string/todo" />
+        android:contentDescription="@string/logo" />
 
     <TextView
         android:id="@+id/lblnewpassword"
@@ -38,26 +41,28 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/lblnewpassword"
         android:layout_marginBottom="20sp"
-        android:hint="Enter New Password"
+        android:hint="@string/enter_new_password"
         android:drawableStart="@drawable/ic_outline_lock"
         android:drawablePadding="15sp"
         android:minHeight="48dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:autofillHints="password" />
 
     <EditText
         android:id="@+id/txtcomformpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtpassword"
-        android:hint="Comform Password"
+        android:hint="@string/comform_password"
         android:minHeight="48dp"
         android:textColor="@color/white"
         android:drawableStart="@drawable/ic_outline_lock_24"
         android:drawablePadding="15sp"
         android:textColorHint="@color/white"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:autofillHints="password" />
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -72,6 +77,6 @@
         android:layout_marginTop="50sp"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
+    </RelativeLayout>
 
-
-</RelativeLayout>
+</ScrollView>
