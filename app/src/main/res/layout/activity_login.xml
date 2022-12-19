@@ -22,8 +22,7 @@
         android:layout_marginTop="80sp"
         android:layout_marginBottom="20sp"
         android:src="@drawable/logo"
-        android:contentDescription="@string/todo" />
-
+        android:contentDescription="@string/logo" />
     <TextView
         android:id="@+id/lbllogin"
         android:layout_below="@id/imgfirst"
