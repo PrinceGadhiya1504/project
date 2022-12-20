@@ -1,7 +1,9 @@
 package com.example.project.models
 
 data class User(
-    val id:Int = 0,
-    val username: String = "",
-    val password: String = ""
+    val Id:Int = 0,
+    val FullName: String = "",
+    val PhoneNo: Int = 0,
+    val Username: String = "",
+    val Password: String = ""
 )
