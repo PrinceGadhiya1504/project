@@ -1,5 +1,6 @@
 package com.example.project
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -24,32 +25,29 @@ class register : AppCompatActivity()
 
         authService = AuthService()
 
+        val txtfullname = findViewById<EditText>(R.id.txtfullname)
+        val txtphonenumber = findViewById<EditText>(R.id.txtphonenumber)
         val txtusername = findViewById<EditText>(R.id.txtusername)
         val txtpassword = findViewById<EditText>(R.id.txtpassword)
         val txtcomformpassword = findViewById<EditText>(R.id.txtcomformpassword)
 
         findViewById<Button>(R.id.btnregister).setOnClickListener {
 
+            val FullName = txtfullname.text.toString()
+            val PhoneNo = txtphonenumber.text.toString()
             val Username = txtusername.text.toString()
             val Password = txtpassword.text.toString()
             val comformpassword = txtcomformpassword.text.toString()
 
-
             if (Password == comformpassword)
             {
-                val user = User(Username = Username, Password = Password)
+                val user = User(FullName = FullName, PhoneNo = PhoneNo, Username = Username, Password = Password)
                 CoroutineScope(Dispatchers.IO).launch {
 
                     val response = authService.register(user)
                     if (response.code == HttpURLConnection.HTTP_CREATED)
                     {
-                        withContext(Dispatchers.Main) {
-                            Toast.makeText(
-                                this@register,
-                                "Registration successful",
-                                Toast.LENGTH_LONG
-                            ).show()
-                        }
+                        click()
                     } else if (response.code == HttpURLConnection.HTTP_CONFLICT)
                     {
                         withContext(Dispatchers.Main) {
@@ -61,13 +59,21 @@ class register : AppCompatActivity()
                         }
                     }
                 }
-            }
-            else
+            } else
                 Toast.makeText(
                     this@register,
                     "Passwords do not match!",
                     Toast.LENGTH_LONG
                 ).show()
+        }
+    }
+    private fun click()
+    {
+        val btnregister = findViewById<Button>(R.id.btnregister)
+
+        btnregister.setOnClickListener {
+            val intent = Intent(this, login::class.java)
+            startActivity(intent)
         }
     }
 }
