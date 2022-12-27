@@ -19,13 +19,15 @@ import java.net.HttpURLConnection
 
 class login : AppCompatActivity()
 {
+    private lateinit var authService: AuthService
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        var authService = AuthService()
+        authService = AuthService()
 
         val txtusername = findViewById<EditText>(R.id.txtusername)
         val txtpassword = findViewById<EditText>(R.id.txtpassword)
@@ -42,40 +44,41 @@ class login : AppCompatActivity()
                 {
                     val loggedInUser = Gson().fromJson(response.message, User::class.java)
                     withContext(Dispatchers.Main) {
-                        Toast.makeText(this@login, loggedInUser.Id.toString(), Toast.LENGTH_LONG).show()
+//                        Toast.makeText(this@login, loggedInUser.Id.toString(), Toast.LENGTH_LONG).show()
+                        movie()
                     }
-                }
-                else if (response.code == HttpURLConnection.HTTP_NOT_FOUND)
+                } else if (response.code == HttpURLConnection.HTTP_NOT_FOUND)
                 {
                     withContext(Dispatchers.Main) {
-                        Toast.makeText(this@login, "Wrong email or password", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@login, "Wrong email or password", Toast.LENGTH_LONG)
+                            .show()
                     }
                 }
             }
         }
+        findViewById<TextView>(R.id.lblregisterlink).let {
+            it.setOnClickListener {
+                val intent = Intent(this, register::class.java)
+                startActivity(intent)
+            }
+        }
+
+        findViewById<TextView>(R.id.lblforgetpassword).let {
+            it.setOnClickListener {
+                val intent = Intent(this, forgotpasswors::class.java)
+                startActivity(intent)
+            }
+        }
     }
 
-//        findViewById<Button>(R.id.btnlogin).let {
-//            it.setOnClickListener{
-//                val intent = Intent(this, movie::class.java)
-//                startActivity(intent)
-//            }
-//        }
-//
-//        findViewById<TextView>(R.id.lblregisterlink).let{
-//            it.setOnClickListener{
-//                val intent = Intent(this, register::class.java)
-//                startActivity(intent)
-//            }
-//        }
-//
-//        findViewById<TextView>(R.id.lblforgetpassword).let{
-//            it.setOnClickListener{
-//                val intent = Intent(this, forgotpasswors::class.java)
-//                startActivity(intent)
-//            }
-//        }
-
-
+private fun movie()
+{
+    findViewById<Button>(R.id.btnlogin).let {
+            it.setOnClickListener{
+                val intent = Intent(this, movie::class.java)
+                startActivity(intent)
+            }
+        }
+}
 
     }

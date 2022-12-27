@@ -1,5 +1,6 @@
 package com.example.project.services
 
+import com.example.project.models.Movie
 import com.example.project.models.User
 import com.example.project.utils.ApiRequest
 import com.example.project.utils.ApiResponse
@@ -15,5 +16,10 @@ class AuthService
     fun register(user: User): ApiResponse
     {
         return ApiRequest.post(ApiRequest.REGISTER_URL, Gson().toJson(user))
+    }
+
+    fun movie(movie: Movie): ApiResponse
+    {
+        return ApiRequest.post(ApiRequest.MOVIE_URL, Gson().toJson(movie))
     }
 }
