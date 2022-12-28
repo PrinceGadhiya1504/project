@@ -1,6 +1,5 @@
 package com.example.project.services
 
-import com.example.project.models.Movie
 import com.example.project.models.User
 import com.example.project.utils.ApiRequest
 import com.example.project.utils.ApiResponse
