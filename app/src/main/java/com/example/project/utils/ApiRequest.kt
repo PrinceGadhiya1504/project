@@ -13,7 +13,7 @@ class ApiRequest
         @JvmStatic val LOGIN_URL = "$BASE_URL/login.php"
         @JvmStatic val REGISTER_URL = "$BASE_URL/register.php"
         @JvmStatic val USERS_URL = "$BASE_URL/users.php"
-//        @JvmStatic val MOVIE_URL = "$BASE_URL/movie.php"
+        @JvmStatic val MOVIE_URL = "$BASE_URL/movie.php"
 
         @JvmStatic
         fun get(url: String): ApiResponse

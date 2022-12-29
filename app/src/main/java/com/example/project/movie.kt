@@ -1,8 +1,10 @@
 package com.example.project
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ListView
 import android.widget.RelativeLayout
 import androidx.cardview.widget.CardView
@@ -15,5 +17,7 @@ class movie : AppCompatActivity()
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_list_view)
+
+
     }
 }

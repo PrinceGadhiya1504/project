@@ -75,7 +75,7 @@ private fun movie()
 {
     findViewById<Button>(R.id.btnlogin).let {
             it.setOnClickListener{
-                val intent = Intent(this, movie::class.java)
+                val intent = Intent(this, movie_list_view::class.java)
                 startActivity(intent)
             }
         }
