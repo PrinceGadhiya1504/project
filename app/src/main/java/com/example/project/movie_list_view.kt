@@ -1,5 +1,6 @@
 package com.example.project
 
+import android.content.Context
 import android.content.Intent
 import com.example.project.Adapter.MovieAdapter
 import androidx.appcompat.app.AppCompatActivity
@@ -23,7 +24,7 @@ class movie_list_view : AppCompatActivity()
     private lateinit var movieService: MovieService
     private lateinit var imageUrl: ImageUrl
     private lateinit var recmovielist: RecyclerView
-    private lateinit var Movies: ArrayList<Movies>
+    private lateinit var MoviesList: ArrayList<Movies>
     private lateinit var MovieAdapter: MovieAdapter
 
     override fun onCreate(savedInstanceState: Bundle?)
@@ -48,24 +49,24 @@ class movie_list_view : AppCompatActivity()
                 Toast.makeText(this@movie_list_view,"No Data Found", Toast.LENGTH_LONG).show()
             }
 
-            Movies = ArrayList()
-            val movie = Gson().fromJson(response.message, Array<Movies>::class.java)
+            MoviesList = ArrayList()
+            val movies = Gson().fromJson(response.message, Array<Movies>::class.java)
 
-            for (movie in Movies)
+            for (movie in movies)
             {
                 GlobalScope.launch (Dispatchers.Main){
-                    Movies.add(
+                    MoviesList.add(
                         Movies(
                             Id = movie.Id,
                             Name = movie.Name,
-                            Discription = movie.Discription,
-                            Relese_Date = movie.Relese_Date,
+                            Description = movie.Description,
+                            ReleaseDate = movie.ReleaseDate,
                             Language = movie.Language,
-                            Price = movie.Price,
-                            Image = imageUrl.ImageBaseUrl.plus(movie.Image)
+                            TicketPrice = movie.TicketPrice,
+                            ImageName = imageUrl.ImageBaseUrl.plus(movie.ImageName)
                         )
                     )
-                    MovieAdapter = MovieAdapter(this@movie_list_view, Movies, object : MovieAdapter.OnItemClickListener{
+                    MovieAdapter = MovieAdapter(this@movie_list_view, MoviesList, object : MovieAdapter.OnItemClickListener{
                         override fun onClick(movie: Movies)
                         {
                             val intent = Intent(this@movie_list_view, movie_list_view::class.java)

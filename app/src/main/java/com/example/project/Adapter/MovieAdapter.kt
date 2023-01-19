@@ -53,13 +53,13 @@ class MovieAdapter(
 
         fun bind(movie: Movies)
         {
-            Glide.with(context).load(movie.Image).into(image)
+            Glide.with(context).load(movie.ImageName).into(image)
 
             title.text = movie.Name
-            description.text = movie.Discription
-            releasedate.text = movie.Relese_Date
+            description.text = movie.Description
+            releasedate.text = movie.ReleaseDate
             language.text = movie.Language
-            price.text = movie.Price.toString()
+            price.text = movie.TicketPrice.toString()
 
             itemView.setOnClickListener { clickListener?.onClick(movie) }
         }

@@ -3,9 +3,9 @@ package com.example.project.models
 data class Movies(
     val Id :Int = 0,
     val Name:String =  "",
-    val Discription:String =  "",
-    val Relese_Date:String =  "",
+    val Description:String =  "",
+    val ReleaseDate:String =  "",
     val Language:String =  "",
-    val Price:Int =  0,
-    val Image:String =  ""
+    val TicketPrice:Int =  0,
+    val ImageName:String =  ""
 )
