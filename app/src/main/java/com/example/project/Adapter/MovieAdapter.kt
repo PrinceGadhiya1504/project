@@ -1,57 +1,74 @@
 package com.example.project.Adapter
 
-import Movie
 import android.content.Context
+import android.graphics.Movie
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewParent
+import android.widget.AdapterView.OnItemClickListener
+import android.widget.ExpandableListView.OnChildClickListener
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.bumptech.glide.Glide
 import com.example.project.R
+import com.example.project.models.Movies
+import com.example.project.movie
+import java.nio.file.Files.size
+import java.text.FieldPosition
 
+class MovieAdapter(
+    private var context: Context,
+    private var Movie: ArrayList<Movies>,
+    private var clickListener: OnItemClickListener? = null
+) : RecyclerView.Adapter<MovieAdapter.ViewHolder>()
+{
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder
+    {
+        return ViewHolder(
+            LayoutInflater.from(context).inflate(R.layout.activity_movie_list_view, null, true)
+        )
+    }
 
-class MovieAdapter(private val context: Context, courseModelArrayList: ArrayList<Movie>) :
-        RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
-        private val courseModelArrayList: ArrayList<Movie>
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder
+    override fun onBindViewHolder(holder: ViewHolder, position: Int)
+    {
+        holder.bind(Movie[position])
+    }
+
+    override fun getItemCount(): Int
+    {
+        return Movie.size
+    }
+
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    {
+        private var image: ImageView = itemView.findViewById(R.id.image)
+        private var title: TextView = itemView.findViewById(R.id.txttitle)
+        private var description: TextView = itemView.findViewById(R.id.txtdescription)
+        private var releasedate: TextView = itemView.findViewById(R.id.txtreleasedate)
+        private var language: TextView = itemView.findViewById(R.id.txtlanguage)
+        private var price: TextView = itemView.findViewById(R.id.txtprice)
+
+        fun bind(movie: Movies)
         {
-                // to inflate the layout for each item of recycler view.
-                val view: View = LayoutInflater.from(parent.context).inflate(R.layout.activity_movie_list_view, parent, false)
-                return ViewHolder(view)
-        }
+            Glide.with(context).load(movie.Image).into(image)
 
-        override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-                // to set data to textview and imageview of each card layout
-                val model: Movie = courseModelArrayList[position]
-                holder.name.text = model.getName()
-                holder.image.setImageResource(model.getImage())
-                holder.description.text = model.getDescription()
-                holder.price.text = model.getPrice()
-        }
+            title.text = movie.Name
+            description.text = movie.Discription
+            releasedate.text = movie.Relese_Date
+            language.text = movie.Language
+            price.text = movie.Price.toString()
 
-        override fun getItemCount(): Int {
-                // this method is used for showing number of card items in recycler view.
-                return courseModelArrayList.size
+            itemView.setOnClickListener { clickListener?.onClick(movie) }
         }
+    }
 
-        // View holder class for initializing of your views such as TextView and Imageview.
-        class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-                val name : TextView
-                val image: ImageView
-                val description: TextView
-                val price: TextView
+    interface OnItemClickListener
+    {
+        fun onClick(movie: Movies)
+    }
 
-                init {
-                        name = itemView.findViewById(R.id.txttitle)
-                        image = itemView.findViewById(R.id.image)
-                        description = itemView.findViewById(R.id.txtdescription)
-                        price = itemView.findViewById(R.id.txtprice)
-                }
-        }
 
-        // Constructor
-        init {
-                this.courseModelArrayList = courseModelArrayList
-        }
 }

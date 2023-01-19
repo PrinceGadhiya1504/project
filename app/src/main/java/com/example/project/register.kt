@@ -34,14 +34,14 @@ class register : AppCompatActivity()
         findViewById<Button>(R.id.btnregister).setOnClickListener {
 
             val FullName = txtfullname.text.toString()
-            val PhoneNo = txtphonenumber.text.toString()
+            val MobileNumber = txtphonenumber.text.toString()
             val Username = txtusername.text.toString()
             val Password = txtpassword.text.toString()
             val comformpassword = txtcomformpassword.text.toString()
 
             if (Password == comformpassword)
             {
-                val user = User(FullName = FullName, PhoneNo = PhoneNo, Username = Username, Password = Password)
+                val user = User(FullName = FullName, MobileNumber = MobileNumber, Username = Username, Password = Password)
                 CoroutineScope(Dispatchers.IO).launch {
 
                     val response = authService.register(user)

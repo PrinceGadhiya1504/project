@@ -1,44 +1,84 @@
 package com.example.project
 
-import Movie
+import android.content.Intent
 import com.example.project.Adapter.MovieAdapter
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
+import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.project.models.ImageUrl
+import com.example.project.models.Movies
+import com.example.project.services.MovieService
+import com.google.gson.Gson
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import java.net.HttpURLConnection
 
 
 class movie_list_view : AppCompatActivity()
 {
-    @SuppressLint("MissingInflatedId")
+    private lateinit var movieService: MovieService
+    private lateinit var imageUrl: ImageUrl
+    private lateinit var recmovielist: RecyclerView
+    private lateinit var Movies: ArrayList<Movies>
+    private lateinit var MovieAdapter: MovieAdapter
+
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie)
 
-        val courseRV = findViewById<RecyclerView>(R.id.recmovielist)
+        imageUrl = ImageUrl()
+        recmovielist = findViewById(R.id.recmovielist)
 
-        // Here, we have created new array list and added data to it
-        val courseModelArrayList: ArrayList<Movie> = ArrayList<Movie>()
-        courseModelArrayList.add(Movie("RRR1",R.drawable.rrr_poster,"SS RAJAMOULI","100"))
-        courseModelArrayList.add(Movie("RRR2",R.drawable.rrr_poster,"SS RAJAMOULI","200"))
-        courseModelArrayList.add(Movie("RRR3",R.drawable.rrr_poster,"SS RAJAMOULI","300"))
-        courseModelArrayList.add(Movie("RRR4",R.drawable.rrr_poster,"SS RAJAMOULI","400"))
-        courseModelArrayList.add(Movie("RRR5",R.drawable.rrr_poster,"SS RAJAMOULI","500"))
+        configureData()
+    }
 
+    private fun configureData()
+    {
+        CoroutineScope(Dispatchers.IO).launch {
+            movieService = MovieService()
+            val response = movieService.getAllMovie()
 
-        // we are initializing our adapter class and passing our arraylist to it.
-        val courseAdapter = MovieAdapter(this, courseModelArrayList)
+            if (response.code == HttpURLConnection.HTTP_NOT_FOUND)
+            {
+                Toast.makeText(this@movie_list_view,"No Data Found", Toast.LENGTH_LONG).show()
+            }
 
-        // below line is for setting a layout manager for our recycler view.
-        // here we are creating vertical list so we will provide orientation as vertical
-        val linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+            Movies = ArrayList()
+            val movie = Gson().fromJson(response.message, Array<Movies>::class.java)
 
-        // in below two lines we are setting layoutmanager and adapter to our recycler view.
-        courseRV.layoutManager = linearLayoutManager
-        courseRV.adapter = courseAdapter
+            for (movie in Movies)
+            {
+                GlobalScope.launch (Dispatchers.Main){
+                    Movies.add(
+                        Movies(
+                            Id = movie.Id,
+                            Name = movie.Name,
+                            Discription = movie.Discription,
+                            Relese_Date = movie.Relese_Date,
+                            Language = movie.Language,
+                            Price = movie.Price,
+                            Image = imageUrl.ImageBaseUrl.plus(movie.Image)
+                        )
+                    )
+                    MovieAdapter = MovieAdapter(this@movie_list_view, Movies, object : MovieAdapter.OnItemClickListener{
+                        override fun onClick(movie: Movies)
+                        {
+                            val intent = Intent(this@movie_list_view, movie_list_view::class.java)
+                            intent.putExtra("movieId", movie.Id)
+                            startActivity(intent)
+                        }
+                    })
 
+                    recmovielist.layoutManager = GridLayoutManager(this@movie_list_view, 1)
+                    recmovielist.adapter = MovieAdapter
+                }
+            }
+        }
 
     }
 }

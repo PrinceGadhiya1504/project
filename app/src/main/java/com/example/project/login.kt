@@ -26,7 +26,6 @@ class login : AppCompatActivity()
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
         authService = AuthService()
 
         val txtusername = findViewById<EditText>(R.id.txtusername)
