@@ -36,6 +36,7 @@ class movie_list_view : AppCompatActivity()
         recmovielist = findViewById(R.id.recmovielist)
 
         configureData()
+
     }
 
     private fun configureData()
@@ -59,7 +60,7 @@ class movie_list_view : AppCompatActivity()
                         Movies(
                             Id = movie.Id,
                             Name = movie.Name,
-                            Description = movie.Description,
+//                            Description = movie.Description,
                             ReleaseDate = movie.ReleaseDate,
                             Language = movie.Language,
                             TicketPrice = movie.TicketPrice,

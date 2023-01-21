@@ -21,61 +21,24 @@
         android:textColor="@color/greenblue"
         android:textSize="40sp" />
 
-    <TextView
-        android:id="@+id/lbltheatername"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lblmoviename"
-        android:layout_marginBottom="20sp"
-        android:text="@string/theater_name"
-        android:textColor="@color/greenblue"
-        android:textSize="20sp" />
+<!--        <TextView-->
+<!--            android:id="@+id/calandermon"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/lbltheatername"-->
+<!--            android:minHeight="48dp"-->
+<!--            android:text="@string/mon"-->
+<!--            android:textColor="@color/white" />-->
 
-        <TextView
-            android:id="@+id/calandermon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/lbltheatername"
-            android:minHeight="48dp"
-            android:text="@string/mon"
-            android:textColor="@color/white" />
-
-        <RadioGroup
-            android:id="@+id/screen"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/lbltheatername"
-            >
-
-            <RadioButton
-                android:id="@+id/screen1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/screen1"
-                android:layout_marginStart="150sp"
-                android:textColor="@color/white" />
-
-            <RadioButton
-                android:id="@+id/screen2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/screen2"
-                android:layout_marginStart="150sp"
-
-                android:textColor="@color/white" />
-
-            <RadioButton
-                android:id="@+id/screen3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/screen3"
-                android:layout_marginStart="150sp"
-                android:textColor="@color/white"
-                />
-        </RadioGroup>
+<!--        <RadioGroup-->
+<!--            android:id="@+id/screen"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/lbltheatername"-->
+<!--            />-->
 <LinearLayout
     android:id="@+id/steatrowA"
-    android:layout_below="@id/screen"
+    android:layout_below="@id/lblmoviename"
     android:layout_width="match_parent"
     android:orientation="horizontal"
     android:gravity="center"

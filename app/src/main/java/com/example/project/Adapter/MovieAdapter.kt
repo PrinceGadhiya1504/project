@@ -46,7 +46,7 @@ class MovieAdapter(
     {
         private var image: ImageView = itemView.findViewById(R.id.image)
         private var title: TextView = itemView.findViewById(R.id.txttitle)
-        private var description: TextView = itemView.findViewById(R.id.txtdescription)
+//        private var description: TextView = itemView.findViewById(R.id.txtdescription)
         private var releasedate: TextView = itemView.findViewById(R.id.txtreleasedate)
         private var language: TextView = itemView.findViewById(R.id.txtlanguage)
         private var price: TextView = itemView.findViewById(R.id.txtprice)
@@ -56,7 +56,7 @@ class MovieAdapter(
             Glide.with(context).load(movie.ImageName).into(image)
 
             title.text = movie.Name
-            description.text = movie.Description
+//            description.text = movie.Description
             releasedate.text = movie.ReleaseDate
             language.text = movie.Language
             price.text = movie.TicketPrice.toString()
