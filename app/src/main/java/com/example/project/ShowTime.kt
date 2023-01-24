@@ -30,6 +30,7 @@ class ShowTime : AppCompatActivity()
 
         dayPicker = findViewById(R.id.day_date_picker)
         dayPicker.setStartDate(day, month+1, year)
+        dayPicker.getSelectedDate { date -> selectDate = date.toString()}
 
         findViewById<Button>(R.id.btn9am).let {
             it.setOnClickListener {

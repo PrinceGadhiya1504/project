@@ -17,26 +17,28 @@
         android:id="@+id/txtmoviename"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20sp"
+        android:layout_marginTop="20sp"
         android:gravity="center"
         android:text="@string/movie_name"
         android:textColor="@color/greenblue"
         android:textSize="40sp" />
 
-    <ImageView
-        android:id="@+id/imgfirst"
-        android:layout_width="match_parent"
-        android:layout_height="200sp"
-        android:layout_below="@id/txtmoviename"
-        android:src="@drawable/movie"
-        android:layout_marginTop="20sp"
-        android:contentDescription="@string/movieimg" />
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:layout_marginTop="20sp"
+            android:layout_below="@id/txtmoviename"
+            android:contentDescription="@string/moviephoto"
+            android:src="@drawable/rrr_poster"
+            tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/txtdescription"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imgfirst"
+        android:layout_below="@id/txtmoviename"
+        android:layout_marginStart="160sp"
         android:layout_marginTop="20sp"
         android:text="@string/description"
         android:textColor="@color/white" />
@@ -45,7 +47,7 @@
         android:id="@+id/lblcalander"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtdescription"
+        android:layout_below="@id/image"
         android:layout_marginTop="20sp"
         android:orientation="horizontal">
 
@@ -53,31 +55,31 @@
             android:id="@+id/day_date_picker"
             android:layout_width="300sp"
             android:layout_height="wrap_content"
+            app:showTitle="false"
+            app:showFullDate="true"
             app:layout_constraintEnd_toEndOf="parent"
+            app:baseColor="@color/black_background"
+            app:baseTextColor="@color/white"
+            app:selectedColor="@color/black_background"
+            app:selectedTextColor="@color/teal_200"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/theatername"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lblcalander"
-        android:layout_marginTop="20sp"
-        android:text="@string/theater_name"
-        android:textColor="@color/white" />
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn9am"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/theatername"
+        android:layout_below="@id/lblcalander"
         android:layout_marginStart="40sp"
         android:layout_marginTop="25sp"
         android:background="@drawable/button_style"
         android:text="@string/_9_00_am"
         android:textColor="@color/black" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn12am"
         android:layout_width="wrap_content"
@@ -94,7 +96,7 @@
         android:id="@+id/btn3am"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/theatername"
+        android:layout_below="@id/lblcalander"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="40sp"
         android:layout_marginTop="25sp"
