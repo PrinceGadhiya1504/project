@@ -17,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/movie_name"
+        android:layout_marginTop="20sp"
         android:textColor="@color/greenblue"
         android:textSize="40sp" />
 
@@ -30,7 +31,7 @@
             android:layout_below="@id/lblmoviename"
             />
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn9am"
+            android:id="@+id/btn"
             android:layout_width="80sp"
             android:layout_height="wrap_content"
             android:layout_marginStart="150sp"
@@ -40,29 +41,22 @@
             android:text="@string/_9_00_am"
             android:textColor="@color/black" />
 
-<!--        <TextView-->
-<!--            android:id="@+id/calandermon"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@id/lbltheatername"-->
-<!--            android:minHeight="48dp"-->
-<!--            android:text="@string/mon"-->
-<!--            android:textColor="@color/white" />-->
-
-<!--        <RadioGroup-->
-<!--            android:id="@+id/screen"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@id/lbltheatername"-->
-<!--            />-->
 <LinearLayout
     android:id="@+id/steatrowA"
-    android:layout_below="@id/lblmoviename"
+    android:layout_below="@id/btn"
     android:layout_width="match_parent"
     android:orientation="horizontal"
     android:gravity="center"
     android:layout_marginTop="25sp"
     android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        />
 
     <CheckBox
         android:id="@+id/seatA1"
@@ -77,6 +71,7 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
         android:id="@+id/seatA3"
         />
     <CheckBox
@@ -102,6 +97,14 @@
             android:gravity="center"
             android:layout_height="wrap_content">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                />
+
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -113,6 +116,7 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="50sp"
                 android:id="@+id/seatB3" />
             <CheckBox
                 android:layout_width="wrap_content"
@@ -136,6 +140,14 @@
             android:gravity="center"
             android:layout_height="wrap_content">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                />
+
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -147,6 +159,7 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="50sp"
                 android:id="@+id/seatC3" />
             <CheckBox
                 android:layout_width="wrap_content"
@@ -170,6 +183,14 @@
             android:gravity="center"
             android:layout_height="wrap_content">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="D"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                />
+
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -183,6 +204,7 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="50sp"
                 android:id="@+id/seatD3"
                 />
             <CheckBox
@@ -210,6 +232,14 @@
             android:gravity="center"
             android:layout_height="wrap_content">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                />
+
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -223,6 +253,7 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="50sp"
                 android:id="@+id/seatE3"
                 />
             <CheckBox
@@ -250,6 +281,14 @@
             android:gravity="center"
             android:layout_height="wrap_content">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="F"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                />
+
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -263,6 +302,7 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="50sp"
                 android:id="@+id/seatF3"
                 />
             <CheckBox
@@ -283,7 +323,7 @@
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnbooknow1"
+            android:id="@+id/btnbooknow"
             android:layout_width="200sp"
             android:layout_height="wrap_content"
             android:layout_below="@id/steatrowF"
@@ -291,6 +331,17 @@
             android:layout_marginTop="25sp"
             android:background="@drawable/button_style"
             android:text="@string/book_now" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="450sp"
+            android:layout_height="160sp"
+            android:layout_below="@id/btnbooknow"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20sp"
+            android:contentDescription="@string/moviephoto"
+            android:src="@drawable/screen"
+            tools:ignore="ImageContrastCheck" />
 
     </RelativeLayout>
 

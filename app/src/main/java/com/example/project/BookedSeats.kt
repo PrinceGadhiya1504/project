@@ -12,7 +12,7 @@ class BookedSeats : AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_booked_seats)
 
-        findViewById<Button>(R.id.btnbooknow1).let {
+        findViewById<Button>(R.id.btnbooknow).let {
             it.setOnClickListener {
                 val intent = Intent(this, Booking::class.java)
                 startActivity(intent)
